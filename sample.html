@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Feature Section</title>
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* General styles for the features section */
+    .features-section {
+      display: flex;
+      flex-direction: column; /* Stack elements vertically on larger screens */
+      background-color: #1e2d3d;
+      color: white;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .feature {
+      flex: 1 1 auto; /* Allow flexibility for height */
+      cursor: pointer;
+      padding: 20px;
+      transition: flex 0.5s, background-color 0.3s;
+      border: 1px solid #fff;
+      box-sizing: border-box;
+      margin: 5px 0; /* Vertical margin for spacing */
+      position: relative;
+      border-radius: 5px;
+    }
+
+    .feature-title {
+      margin: 0;
+      font-size: 1.2em;
+    }
+
+    .fab-icon {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      font-size: 1.2em;
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .feature-content {
+      display: none;
+      margin-top: 10px;
+      font-size: 0.9em;
+    }
+
+    .feature.expanded {
+      background-color: #2a3b4c; /* Slightly darker background when expanded */
+    }
+
+    .feature.expanded .feature-content {
+      display: block;
+    }
+
+    .feature.expanded .fab-icon {
+      transform: rotate(180deg); /* Rotate icon when expanded */
+    }
+
+    /* Media Query for Smaller Screens */
+    @media (max-width: 768px) {
+      .features-section {
+        flex-direction: row; /* Align items horizontally on smaller screens */
+        flex-wrap: wrap; /* Allow wrapping of items */
+      }
+
+      .feature {
+        flex: 1 1 100%; /* Take full width in smaller screens */
+        margin: 5px; /* Add margin for spacing */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="features-section">
+    <div class="feature" onclick="expandSection(this)">
+      <h3 class="feature-title">Compact and Versatile</h3>
+      <i class="fab-icon fas fa-chevron-down"></i> <!-- FAB Icon -->
+      <p class="feature-content">Content for Compact and Versatile...</p>
+    </div>
+    <div class="feature" onclick="expandSection(this)">
+      <h3 class="feature-title">Higher Performance</h3>
+      <i class="fab-icon fas fa-chevron-down"></i> <!-- FAB Icon -->
+      <p class="feature-content">Content for Higher Performance...</p>
+    </div>
+    <div class="feature" onclick="expandSection(this)">
+      <h3 class="feature-title">High Reliability</h3>
+      <i class="fab-icon fas fa-chevron-down"></i> <!-- FAB Icon -->
+      <p class="feature-content">Content for High Reliability...</p>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript to toggle the expanded class and rotate the icon
+    function expandSection(element) {
+      const allFeatures = document.querySelectorAll('.feature');
+      allFeatures.forEach(feature => {
+        if (feature !== element) {
+          feature.classList.remove('expanded');
+        }
+      });
+      element.classList.toggle('expanded');
+    }
+  </script>
+</body>
+</html>

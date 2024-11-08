@@ -1,0 +1,247 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+/* Section with Background Image */
+.background-section {
+    background-image: url('img1.jpeg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    position: relative;
+}
+
+/* Overlay Effect */
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Above Header Styling */
+.above-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+
+.above-header img {
+    max-width: 200px;
+    height: auto;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Updated the WhatsApp Contact Styling for Responsiveness */
+.whatsapp-contact {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #fff;
+}
+
+.whatsapp-contact .fab {
+    color: #25D366;
+}
+
+/* Get Quote Button */
+.get-quote-btn {
+    background-color: #3891da;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.get-quote-btn:hover {
+    background-color: #96d5ff;
+}
+
+/* Main Header Styling */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+
+/* Menu Icon Styling */
+.menu-icon {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 15px; /* Add spacing around the icon */
+}
+
+/* Navigation Bar Styling */
+.nav-bar {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 5;
+}
+
+.nav-bar.active {
+    display: flex;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 30px;
+}
+
+.nav-item {
+    text-align: left;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Content on the Image */
+.image-content {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    color: #fff;
+    z-index: 2;
+}
+
+.content-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content-paragraph {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.content-button {
+    background-color: #3891da;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.content-button:hover {
+    background-color: #96d5ff;
+}
+
+/* Horizontal Line Styling */
+.thick-line {
+    border: none;
+    height: 5px;
+    background-color: black;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .above-header {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .right-section {
+        order: 1; /* Place it below the logo */
+        gap: 5px; /* Reduced gap for mobile */
+        flex-wrap: wrap; /* Allow wrapping of content */
+    }
+
+    .menu-icon {
+        order: 0; /* Move the menu icon above the contact info */
+        margin: 10px 0; /* Margin above and below */
+    }
+
+    .whatsapp-contact,
+    .get-quote-btn {
+        font-size: 12px; /* Smaller font for mobile */
+    }
+
+    .nav-bar {
+        padding: 10px; /* More padding for mobile */
+    }
+
+    /* Adjust image content for mobile */
+    .image-content {
+        left: 15px; /* Less space on the left */
+        bottom: 15px; /* Less space from the bottom */
+        text-align: left; /* Align text to the left */
+    }
+
+    .content-heading {
+        font-size: 20px; /* Smaller heading on mobile */
+    }
+
+    .content-paragraph {
+        font-size: 12px; /* Smaller paragraph on mobile */
+    }
+
+    .content-button {
+        padding: 8px 10px; /* Smaller button padding */
+        font-size: 12px; /* Smaller button text */
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-icon {
+        display: none; /* Hide the icon on larger screens */
+    }
+
+    .nav-bar {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        gap: 20px;
+        justify-content: flex-end;
+        margin-left: auto;
+    }
+
+    .nav-item {
+        text-align: center;
+    }
+}

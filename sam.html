@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Header Overlay</title>
+    <link rel="stylesheet" href="sam.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Section with Overlay -->
+    <section class="background-section" id="about">
+        <div class="background-overlay"></div>
+        
+        <!-- Above Header -->
+        <header class="above-header">
+            <a href="#" class="site-logo">
+                <span class="logo-main"><img src="images/logo.png" alt="logo"></span> 
+            </a>
+            <div class="right-section">
+                <div class="whatsapp-contact">
+                    <i class="fab fa-whatsapp"></i>
+                    <span class="contact-number">+123 456 7890</span>
+                </div>
+                <a href="#" class="get-quote-btn">Get a Quote</a>
+            </div>
+        </header>
+
+        <!-- Main Header -->
+        <header class="main-header">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav class="nav-bar">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Products</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Content on the Image -->
+        <div class="image-content">
+            <h1 class="content-heading">Your Heading Here</h1>
+            <p class="content-paragraph">
+                This is the first line of your paragraph.<br>
+                Here comes the second line of text.<br>
+                The third line continues here.<br>
+                Finally, the fourth line appears.
+            </p>
+            <a href="#" class="content-button">Explore More</a>
+        </div>
+    </section>
+    <hr class="thick-line">
+</body>
+</html>
